@@ -80,7 +80,7 @@ This project is configured to run with systemd on Ubuntu.
 sudo systemctl status myapp
 ```
 
-### Docker Support 
+## Docker Support 
 
 This project can also be run inside a Docker container.
 
