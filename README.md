@@ -47,26 +47,26 @@ Returns:
 {"status":"ok"}
 ```
 
-Deployment Steps
+## Deployment Steps
 
-1. Clone repository
+### 1. Clone repository
 ```text
 git clone https://github.com/nikanikanikaa98-byte/flask-aws-ec2-docker-deployment.git
 cd flask-aws-ec2-docker-deployment
 ```
 
-2. Create virtual environment
+### 2. Create virtual environment
 ```text
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-3. Install dependencies
+### 3. Install dependencies
 ```text
 pip install -r requirements.txt
 ```
 
-4. Run with Gunicorn
+### 4. Run with Gunicorn
 ```text
 gunicorn --workers 3 --bind 127.0.0.1:5000 wsgi:app
 systemd Service 
@@ -74,29 +74,29 @@ systemd Service
 
 This project is configured to run with systemd on Ubuntu.
 
-###Example service startup check:
+### Example service startup check:
 
 ```text
 sudo systemctl status myapp
 ```
 
-Docker Support 
+### Docker Support 
 
 This project can also be run inside a Docker container.
 
-###Build Docker image
+### Build Docker image
 
 ```text
 docker build -t flask-docker-app .
 ```
 
-###Run Docker container
+### Run Docker container
 
 ```text
 docker run -d -p 5001:5000 --name flask-container flask-docker-app
 ```
 
-###Test Docker container
+### Test Docker container
 
 ```text
 curl http://127.0.0.1:5001/
@@ -110,22 +110,22 @@ Expected responses:
 /health → {"status":"ok"}
 ```
 
-###Project Files
-app.py
-wsgi.py
-requirements.txt
-Dockerfile
-.dockerignore
-README.md
+## Project Files
+- app.py
+- wsgi.py
+- requirements.txt
+- Dockerfile
+- .dockerignore
+- README.md
 
-###What I Learned
-How to deploy a Flask application on AWS EC2
-How to configure Gunicorn as a production WSGI server
-How to use Nginx as a reverse proxy
-How to manage application startup with systemd
-How to containerize a Python web application with Docker
-How to work with Linux-based deployment workflows
+## What I Learned
+- How to deploy a Flask application on AWS EC2
+- How to configure Gunicorn as a production WSGI server
+- How to use Nginx as a reverse proxy
+- How to manage application startup with systemd
+- How to containerize a Python web application with Docker
+- How to work with Linux-based deployment workflows
 
-###Notes
+## Notes
 
 This project started as a basic Flask deployment on EC2 and was later improved with Docker support for containerized execution.
