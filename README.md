@@ -110,6 +110,14 @@ Expected responses:
 /health → {"status":"ok"}
 ```
 
+## Docker Compose Support
+
+This project can also be started with Docker Compose.
+
+### Run with Docker Compose
+```bash
+docker compose up -d 
+```
 ## Project Files
 - app.py
 - wsgi.py
