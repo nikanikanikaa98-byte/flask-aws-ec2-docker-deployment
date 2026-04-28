@@ -118,6 +118,9 @@ This project can also be started with Docker Compose.
 ```bash
 docker compose up -d 
 ```
+
+##CI/CD pipeline is configured with GitHub Actions.
+
 ## Project Files
 - app.py
 - wsgi.py
