@@ -1,9 +1,10 @@
 # Flask EC2 Deployment Project
 
 ## Project Overview
+## Project Overview
 This project demonstrates a production-style deployment of a Flask web application on AWS EC2 using Gunicorn, Nginx, and systemd.
 
-The application can also be packaged and run inside a Docker container, which makes the project more portable and closer to a real-world deployment workflow.
+The application is also containerized with Docker, orchestrated with Docker Compose, and integrated with GitHub Actions CI/CD for automated testing and deployment.
 
 ## Tech Stack
 - Python 3
@@ -12,6 +13,8 @@ The application can also be packaged and run inside a Docker container, which ma
 - Nginx
 - systemd
 - Docker
+- Docker Compose
+- GitHub Actions
 - AWS EC2 (Ubuntu)
 - Git + GitHub
 
@@ -21,6 +24,9 @@ Client (Browser) → Nginx (Reverse Proxy) → Gunicorn (WSGI Server) → Flask 
 ### Docker Runtime Architecture
 Client → Docker Container → Gunicorn → Flask Application
 
+### CI/CD Workflow
+Developer Push → GitHub Actions CI → GitHub Actions CD → AWS EC2 Deployment
+
 ## Features
 - Flask web application
 - Health check endpoint: `/health`
@@ -28,6 +34,8 @@ Client → Docker Container → Gunicorn → Flask Application
 - Nginx reverse proxy
 - systemd service management
 - Docker support
+- Docker Compose support
+-- GitHub Actions CI/CD pipeline
 - Deployment on AWS EC2
 
 ## Endpoints
